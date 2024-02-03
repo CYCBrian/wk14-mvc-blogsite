@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="siteTop">
+        <h1 class="titleBar">
+            <a href="/" class="siteName">NOT Stack Overflow</a>
+        </h1>
+        <nav class="navBar">
+            <a href="/homepage" class="navBtn">Homepage</a>
+            <a href="/dashboard" class="navBtn">Dashboard</a>
+            {{#if logged_in}}
+            <button class="navBtn" id="signOut">Sign Out</button>
+            {{else}}
+            <a href="/signIn" class="navBtn">Sign In</a>
+            {{/if}}
+        </nav>
+    </header>
+    <main class="contentContainer">
+        {{{body}}}
+    </main>
+    <footer>
+        <p class="footerText">Bleep Bloop</p>
+    </footer>
+</body>
+</html>
